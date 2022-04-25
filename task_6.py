@@ -1,5 +1,6 @@
 import sqlite3
 
+
 def db_connect(query):
     connection = sqlite3.connect('netflix.db')
     cursor = connection.cursor()
@@ -7,6 +8,7 @@ def db_connect(query):
     result = cursor.fetchall()
     connection.close()
     return result
+
 
 def get_films(type_film, release_year, genre):
     query = f"""

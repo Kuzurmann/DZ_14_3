@@ -9,6 +9,7 @@ def db_connect(query):
     connection.close()
     return result
 
+
 def get_actors(name1='Rose McIver', name2='Ben Lamb'):
     query = f"""
             SELECT
@@ -29,4 +30,6 @@ def get_actors(name1='Rose McIver', name2='Ben Lamb'):
 
     result = set(result)
     print(result)
+
+
 get_actors()
